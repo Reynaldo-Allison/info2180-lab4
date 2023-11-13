@@ -65,7 +65,7 @@ $superheroes = [
 
 
 $user_Input = $_GET['name'];
-    $user_Input = htmlspecialchars($user_Input, ENT_COMPAT); //sanitizing the input
+$user_Input = htmlspecialchars($user_Input, ENT_COMPAT); 
 
     
     if(empty($user_Input)){

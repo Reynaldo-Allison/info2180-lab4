@@ -6,10 +6,11 @@ window.addEventListener("load", function () {
   
     btn.addEventListener("click", function (event) {
       event.preventDefault();
-  
+      
       let input_value = user_Input.value;
       let url = `superheroes.php?name=${input_value}`;
-  
+    
+
       fetch(url) 
         .then(function (response) {
           if (response.ok) {
@@ -20,6 +21,7 @@ window.addEventListener("load", function () {
         })
         .then(function (data) {
           result.innerHTML = data;
+          user_Input.value = "";
         });
     });
   });
